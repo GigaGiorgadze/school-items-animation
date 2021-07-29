@@ -1,0 +1,75 @@
+h1{
+    margin: 0;
+    text-align: center;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: cornsilk;
+    text-align: center;
+}
+
+
+.main{
+
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+}
+
+
+#calc{
+    transform: translateY(40vh) rotateZ(-45deg);
+    animation: calc 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s 1;
+}
+#book{
+    transform: translateY(120vh) rotateZ(-15deg);
+    animation: book 2s  cubic-bezier(0.175, 0.885, 0.32, 1.275) 2.5s 1  forwards;
+}
+#paper{
+    transform: rotateZ(10deg) translateY(120vh) translateX(10vw);
+   animation: paper 2s  cubic-bezier(0.175, 0.885, 0.32, 1.275) 4.5s 1  forwards;
+}
+#pallet{
+    transform: rotateZ(45deg) translateY(120vh) translateX(25vw);
+  animation: pallet 2s  cubic-bezier(0.175, 0.885, 0.32, 1.275) 6.5s 1  forwards;;
+}
+#pen{
+    transform: rotateZ(90deg) translateY(70vh) translateX(50vw);   
+      animation: pen 2s  cubic-bezier(0.175, 0.885, 0.32, 1.275) 8.5s 1  forwards;;
+}
+@keyframes pen {
+    from{
+        transform: rotateZ(90deg) translateY(70vh) translateX(50vw); 
+    }to{
+        transform: rotateZ(90deg) translateY(70vh) translateX(30vw); 
+    }
+}
+@keyframes calc {
+    from{
+        transform: translateY(120vh) rotateZ(-45deg);
+    }to{
+        transform: translateY(40vh) rotateZ(-45deg);
+    }
+}
+@keyframes book {
+    from{
+        transform: translateY(120vh) rotateZ(-15deg);
+    }to{
+        transform: rotateZ(-15deg) translateY(20vh);
+    }
+}
+@keyframes paper {
+    from{
+        transform: rotateZ(10deg) translateY(120vh) translateX(10vw);
+    }to{
+        transform: rotateZ(10deg) translateY(15vh) translateX(10vw);
+    }
+}
+@keyframes pallet {
+    from{
+        transform: rotateZ(45deg) translateY(120vh) translateX(25vw);
+    }to{
+        transform: rotateZ(45deg) translateY(15vh) translateX(25vw);
+    }
+}
